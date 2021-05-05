@@ -97,6 +97,9 @@ fieldset fieldset input[type='radio'] + span {
 	display: grid;
 	align-items: center;
 	border: 0.2rem solid transparent;
+	cursor: pointer;
+	-webkit-user-select; none;
+	user-select: none;
 }
 
 fieldset fieldset input[type='radio']:focus + span {
@@ -137,3 +140,20 @@ button:focus:not(:focus-visible) {
 	outline: none;
 }
 
+table {
+	width: 100%;
+	border-spacing: 0;
+}
+
+th, td {
+	padding: 1rem 0.5rem;
+	text-align: left;
+}
+
+th:first, td:first {
+	padding-left: 0;
+}
+
+tr:nth-child(odd) td {
+	background: #eee;
+}

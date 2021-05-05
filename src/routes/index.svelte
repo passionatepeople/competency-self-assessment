@@ -1,30 +1,31 @@
 <script context="module" lang="ts">
 	import type { Load } from '@sveltejs/kit';
 
-	export const load: Load = async ({ fetch }) => {
-		const res = await fetch('/questions/all.json');
-		return res.ok
-			? { props: { categories: await res.json() } }
-			: { error: new Error(await res.json()) };
-	};
+	export const load: Load = async ({ context }) => ({
+		props: { questionnaire: context.questionnaire },
+	});
 </script>
 
 <script lang="ts">
-	import type { Category } from './_questions';
-	import { shuffle } from './_questions';
-	export let categories: Category[];
-	$: categoriesWithShuffledQuestions = categories.map((category) => ({
+	import type { Questionnaire } from './_questionnaire';
+	import { shuffle } from './_questionnaire';
+
+	export let questionnaire: Questionnaire;
+
+	$: questions = questionnaire.questions.map((category) => ({
 		...category,
 		questions: shuffle(category.questions),
 	}));
 </script>
 
 <h1>Competency self-evaluation</h1>
+
 <p>This tool is intended to help you asses your "T-shaped skills".</p>
-<form action="/results" method="get">
-	{#each categoriesWithShuffledQuestions as category}
+
+<form action="/result" method="get">
+	{#each questions as category}
 		<fieldset>
-			<legend><h2>{category.name}</h2></legend>
+			<legend><h2>{questionnaire.categories[category.slug]}</h2></legend>
 			{#each category.questions as question, index}
 				<fieldset>
 					<legend>{question.question}</legend>

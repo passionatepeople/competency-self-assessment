@@ -4,9 +4,14 @@ export type Question = {
 };
 
 export type Category = {
-	name: string;
 	slug: string;
 	questions: Question[];
+};
+
+export type Questionnaire = {
+	categories: { [slug: string]: string };
+	levels: string[];
+	questions: Category[];
 };
 
 export const shuffle = <T>(array: T[]): T[] => {
