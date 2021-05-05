@@ -1,0 +1,32 @@
+[
+	[
+		"Is familiar with at least one CI/CD solution.",
+		"Understands the actions necessary to move an app through a CI/CD pipeline (Dev -> Tst -> Acc -> Prd)).",
+		"Checks automated testing logs and makes use of existing version control system."
+	],
+	[
+		"Can add additional steps and stages to an existing pipeline when needed.",
+		"Has a clear view on what the end-product and result of the CI pipeline is.",
+		"Integrates test scripts into the CI/CD pipeline."
+	],
+	[
+		"Sets up a CI/CD pipeline from scratch.",
+		"Makes sure the pipeline is set up correctly.",
+		"Identifies improvements that can be made in existing pipelines.",
+		"Implements requirements for the CI/CD pipeline.",
+		"Reviews changes to the pipeline made by others."
+	],
+	[
+		"Shapes the release-process together with CI/CD pipeline.",
+		"Actively promotes trust in the CI/CD pipeline within the organization.",
+		"Makes (performance) improvements to the pipeline itself based on metrics.",
+		"Sets standards for the CI/CD pipeline.",
+		"Assesses new CI/CD tooling and implements it if necessary.",
+		"Aligns with other teams/business units regarding CI/CD strategy."
+	],
+	[
+		"Actively coaches others to automate delivery of software.",
+		"Shares knowledge and experience with others, aiming to push the level of CI/CD further within organisation.",
+		"Takes responsibility and assumes ownership of the quality of the entire CI/CD pipeline."
+	]
+]

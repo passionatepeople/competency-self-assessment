@@ -1,0 +1,25 @@
+{
+  "name": "pp-competency-evaluation",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "preview": "svelte-kit preview",
+    "lint": "prettier --plugin prettier-plugin-svelte --check .",
+    "format": "prettier --plugin prettier-plugin-svelte --write ."
+  },
+  "devDependencies": {
+    "@sveltejs/kit": "next",
+    "prettier": "~2.2.1",
+    "prettier-plugin-svelte": "^2.2.0",
+    "svelte": "^3.34.0",
+    "svelte-preprocess": "^4.0.0",
+    "tslib": "^2.0.0",
+    "typescript": "^4.0.0",
+    "vite": "^2.2.3"
+  },
+  "type": "module",
+  "engines": {
+    "node": "^14.16"
+  }
+}

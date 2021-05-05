@@ -1,0 +1,34 @@
+[
+	[
+		"Knows the most important infra components and key technologies which are used within the organisation.",
+		"Knows how to execute basic predefined infrastructure tasks."
+	],
+	[
+		"Understands configuration options of infrastructure components and characteristics (type, platform, performance, sizing, availability etc.).",
+		"Understands the infrastructure architecture principles and standards and applies them.",
+		"Is able to set up new infrastructure components based on pre-specified requirements.",
+		"Understands actions that impact availability and continuity configurations (e.g, backup & restore/disaster recovery).",
+		"Addresses and resolves more familiar infrastructure issues."
+	],
+	[
+		"Autonomously solves more complex infrastructure issues.",
+		"Oversees the implications of tactical decisions on the IT infrastructure domain.",
+		"Translates design into infrastructure as code.",
+		"Optimizes financial implications of design choices.",
+		"Manages lifecycle of applications and patches.",
+		"Takes in consideration the hosting strategy (cloud vs. on-prem) to identify the most efficient resource usage.",
+		"Sets up and configures a monitoring workflow and knows which metrics to track."
+	],
+	[
+		"Has a deep understanding of the concepts, technologies and processes used within the infra domain.",
+		"Is able to solve complex issues and can address alternatives.",
+		"Makes strategic decisions and oversees the impact on the IT infra domain.",
+		"Challenges infrastructure architecture principles and standards.",
+		"Uses monitoring output as input to decide on infrastructure optimizations.",
+		"Optimizes failover strategy."
+	],
+	[
+		"Has authoritative knowledge and deep understanding of the concepts, technologies and processes used within the IT Infrastructure domain.",
+		"Creates and develops a personal vision of different alternatives/strategies in infrastructure and gets support for this vision within the organization."
+	]
+]

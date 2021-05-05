@@ -1,0 +1,32 @@
+[
+	[
+		"Knows how to use existing style guidelines and how to apply existing design principles.",
+		"Makes use of ready made UI patterns and libraries.",
+		"Is aware of the impact of shapes/colors/sizes in user interaction with the system."
+	],
+	[
+		"Independenty can extrapolate existing style guidelines to yet undefined areas.",
+		"Implements new visual elements semantically.",
+		"Is aware of accessibility features and requirements.",
+		"Has experience with working with various prototyping tools."
+	],
+	[
+		"Is able to critically asses designs and choose most efficient one for users to achieve their goals.",
+		"Can take functional requirements and independently come up with an implementation with a good UX approach.",
+		"Is able to coach new team members on which style guides and UI/UX principles to use and why.",
+		"Processes user feedback and makes design decisions based on that.",
+		"Is aware of market standards and patterns for solving interaction goals."
+	],
+	[
+		"Is able to set up a style guide and implement component library from scratch.",
+		"Oversees consistent implementation of styleguide/component library accross the whole platform.",
+		"Is capable of conducting user feedback sessions.",
+		"Enforces accessability requirements accross whole platform.",
+		"Challenges business requirements and advises on better UX approaches.",
+		"Challenges existing UI/UX approaches and pushes to impove."
+	],
+	[
+		"Establishes a vision and leads the way for UX within a project/organisation.",
+		"Provides feedback and inspiration on the project/organisation UX approach based on the state of the industry."
+	]
+]

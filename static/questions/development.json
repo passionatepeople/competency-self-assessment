@@ -1,0 +1,30 @@
+[
+	["Interprets code and makes simple adjustments to it based on clear instructions."],
+	[
+		"Creates working and maintainable code in an existing codebase.",
+		"If the code does not lead to the desired result, he/she can discover the issue and resolve it, but sometimes would require help.",
+		"Executes simple user stories.",
+		"Ensures that technical debt is kept to a minimum.",
+		"Sets up and performs unit tests on own code.",
+		"Prepares own changes so that they can be moved through the whole pipeline (Dev -> Tst -> Acc -> Prd)."
+	],
+	[
+		"Develops new features and determines WHICH user stories/requirements must be realized and HOW.",
+		"This includes software design where security, availability, scalability and other NFRs (non functional requirements) are taken into account.",
+		"Evaluates and improves the code of others and incorporates the impact of other systems with these changes.",
+		"Ensures the solution does not create more technical debt.",
+		"Performs objective code assessments."
+	],
+	[
+		"Quickly understands different types of business needs and chooses the best solutions (technologies & architectural designs).",
+		"Advises and proposes improvements in the change and release process and translates this to coding policy.",
+		"Takes the lead in the discussion on technology.",
+		"Can implement a library/utility and design an API from scratch."
+	],
+	[
+		"Is able to create and maintain a standalone library with sophisticated API from scratch.",
+		"Has and shares a vision regards to the technical state of the future IT landscape and embeds that within the organisation.",
+		"Is the point of contact for architects and senior management to talk about the technology in depth.",
+		"Makes decisions based on the amount of knowledge they have, technology as a tool to fix the problem at han."
+	]
+]

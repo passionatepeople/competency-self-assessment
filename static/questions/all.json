@@ -1,0 +1,298 @@
+{
+	"principles": [
+		[
+			"None to limited knowledge/experience.",
+			"Needs instructions and clear work processes to be able to work.",
+			"The primairy focus of work is within a team."
+		],
+		[
+			"Knows how to retreive and share knowledge in his/her area.",
+			"Can execute simple tasks, but can not fully work independently.",
+			"Begins to recognize patterns and acts accordingly."
+		],
+		[
+			"Can work independently.",
+			"Supports (new) teammembers.",
+			"Has a broader view on dependencies from different teams within organisation.",
+			"Proactivley gaining knowledge outside his/her own domain."
+		],
+		[
+			"Structurally improves the quality within his/her area of expertise.",
+			"Coaches colleagues.",
+			"Can handle discussions at senior management & business level."
+		],
+		[
+			"Is seen as authority on his/her domain, inside and outside organisation.",
+			"Is a visionairy, sets standards, and innovates.",
+			"Has a leading role in complex cross-team and cross-discipline issues.",
+			"The go-to person for approaching problems from multiple perspectives.",
+			"Intuitive and analytical decision-making.",
+			"Knows the in's and outs of this domain and uses that to inspire peopl."
+		]
+	],
+	"development": [
+		["Interprets code and makes simple adjustments to it based on clear instructions."],
+		[
+			"Creates working and maintainable code in an existing codebase.",
+			"If the code does not lead to the desired result, he/she can discover the issue and resolve it, but sometimes would require help.",
+			"Executes simple user stories.",
+			"Ensures that technical debt is kept to a minimum.",
+			"Sets up and performs unit tests on own code.",
+			"Prepares own changes so that they can be moved through the whole pipeline (Dev -> Tst -> Acc -> Prd)."
+		],
+		[
+			"Develops new features and determines WHICH user stories/requirements must be realized and HOW.",
+			"This includes software design where security, availability, scalability and other NFRs (non functional requirements) are taken into account.",
+			"Evaluates and improves the code of others and incorporates the impact of other systems with these changes.",
+			"Ensures the solution does not create more technical debt.",
+			"Performs objective code assessments."
+		],
+		[
+			"Quickly understands different types of business needs and chooses the best solutions (technologies & architectural designs).",
+			"Advises and proposes improvements in the change and release process and translates this to coding policy.",
+			"Takes the lead in the discussion on technology.",
+			"Can implement a library/utility and design an API from scratch."
+		],
+		[
+			"Is able to create and maintain a standalone library with sophisticated API from scratch.",
+			"Has and shares a vision regards to the technical state of the future IT landscape and embeds that within the organisation.",
+			"Is the point of contact for architects and senior management to talk about the technology in depth.",
+			"Makes decisions based on the amount of knowledge they have, technology as a tool to fix the problem at han."
+		]
+	],
+	"testing": [
+		[
+			"Executes structured manual or automated test cases.",
+			"Records and communicates findings so that they are clear and reproducible.",
+			"Specifies test cases based on acceptance criteria."
+		],
+		[
+			"Is able to update existing cases to match new requirements.",
+			"In case of findings, provides analysis and information needed to resolve the issue.",
+			"Guides other colleagues in carrying out tests.",
+			"Applies exploratory testing based on the basis of domain knowledge.",
+			"Is familiar with the Testing Pyramid concept."
+		],
+		[
+			"Sets up and writes tests.",
+			"Improves existing test tool setups.",
+			"Designs tests with the end user in mind.",
+			"Evaluates the application performance and comes up with ways to test this automatically.",
+			"Perfoms a product risk analysis to achieve the most efficient test coverage possible.",
+			"Understands the impact and implied risks of failing tests."
+		],
+		[
+			"Sets up a test strategy, selects the most appropriate test tool, implements and configures it.",
+			"Understands relationships/dependencies and risks between systems, teams and business units.",
+			"Sets standards for test artifacts and metrics.",
+			"Draws and implements a cross-team test strategy.",
+			"Provides improvements for test infrastructure and test data."
+		],
+		[
+			"Advocates for testing culture.",
+			"Innovates the testing field within organisation.",
+			"Actively evaluates the quality standards and expands/improves them as necessary.",
+			"Advises and challenges senior management on quality-related topics."
+		]
+	],
+	"cicd": [
+		[
+			"Is familiar with at least one CI/CD solution.",
+			"Understands the actions necessary to move an app through a CI/CD pipeline (Dev -> Tst -> Acc -> Prd)).",
+			"Checks automated testing logs and makes use of existing version control system."
+		],
+		[
+			"Can add additional steps and stages to an existing pipeline when needed.",
+			"Has a clear view on what the end-product and result of the CI pipeline is.",
+			"Integrates test scripts into the CI/CD pipeline."
+		],
+		[
+			"Sets up a CI/CD pipeline from scratch.",
+			"Makes sure the pipeline is set up correctly.",
+			"Identifies improvements that can be made in existing pipelines.",
+			"Implements requirements for the CI/CD pipeline.",
+			"Reviews changes to the pipeline made by others."
+		],
+		[
+			"Shapes the release-process together with CI/CD pipeline.",
+			"Actively promotes trust in the CI/CD pipeline within the organization.",
+			"Makes (performance) improvements to the pipeline itself based on metrics.",
+			"Sets standards for the CI/CD pipeline.",
+			"Assesses new CI/CD tooling and implements it if necessary.",
+			"Aligns with other teams/business units regarding CI/CD strategy."
+		],
+		[
+			"Actively coaches others to automate delivery of software.",
+			"Shares knowledge and experience with others, aiming to push the level of CI/CD further within organisation.",
+			"Takes responsibility and assumes ownership of the quality of the entire CI/CD pipeline."
+		]
+	],
+	"uiux": [
+		[
+			"Knows how to use existing style guidelines and how to apply existing design principles.",
+			"Makes use of ready made UI patterns and libraries.",
+			"Is aware of the impact of shapes/colors/sizes in user interaction with the system."
+		],
+		[
+			"Independenty can extrapolate existing style guidelines to yet undefined areas.",
+			"Implements new visual elements semantically.",
+			"Is aware of accessibility features and requirements.",
+			"Has experience with working with various prototyping tools."
+		],
+		[
+			"Is able to critically asses designs and choose most efficient one for users to achieve their goals.",
+			"Can take functional requirements and independently come up with an implementation with a good UX approach.",
+			"Is able to coach new team members on which style guides and UI/UX principles to use and why.",
+			"Processes user feedback and makes design decisions based on that.",
+			"Is aware of market standards and patterns for solving interaction goals."
+		],
+		[
+			"Is able to set up a style guide and implement component library from scratch.",
+			"Oversees consistent implementation of styleguide/component library accross the whole platform.",
+			"Is capable of conducting user feedback sessions.",
+			"Enforces accessability requirements accross whole platform.",
+			"Challenges business requirements and advises on better UX approaches.",
+			"Challenges existing UI/UX approaches and pushes to impove."
+		],
+		[
+			"Establishes a vision and leads the way for UX within a project/organisation.",
+			"Provides feedback and inspiration on the project/organisation UX approach based on the state of the industry."
+		]
+	],
+	"infrastructure": [
+		[
+			"Knows the most important infra components and key technologies which are used within the organisation.",
+			"Knows how to execute basic predefined infrastructure tasks."
+		],
+		[
+			"Understands configuration options of infrastructure components and characteristics (type, platform, performance, sizing, availability etc.).",
+			"Understands the infrastructure architecture principles and standards and applies them.",
+			"Is able to set up new infrastructure components based on pre-specified requirements.",
+			"Understands actions that impact availability and continuity configurations (e.g, backup & restore/disaster recovery).",
+			"Addresses and resolves more familiar infrastructure issues."
+		],
+		[
+			"Autonomously solves more complex infrastructure issues.",
+			"Oversees the implications of tactical decisions on the IT infrastructure domain.",
+			"Translates design into infrastructure as code.",
+			"Optimizes financial implications of design choices.",
+			"Manages lifecycle of applications and patches.",
+			"Takes in consideration the hosting strategy (cloud vs. on-prem) to identify the most efficient resource usage.",
+			"Sets up and configures a monitoring workflow and knows which metrics to track."
+		],
+		[
+			"Has a deep understanding of the concepts, technologies and processes used within the infra domain.",
+			"Is able to solve complex issues and can address alternatives.",
+			"Makes strategic decisions and oversees the impact on the IT infra domain.",
+			"Challenges infrastructure architecture principles and standards.",
+			"Uses monitoring output as input to decide on infrastructure optimizations.",
+			"Optimizes failover strategy."
+		],
+		[
+			"Has authoritative knowledge and deep understanding of the concepts, technologies and processes used within the IT Infrastructure domain.",
+			"Creates and develops a personal vision of different alternatives/strategies in infrastructure and gets support for this vision within the organization."
+		]
+	],
+	"security": [
+		[
+			"Understands why security is important.",
+			"Is aware about the concept of sensitive data (BSN, personal data, salary, revenue, financial information etc..",
+			"Is aware about GDPR principles.",
+			"Is aware about different threats."
+		],
+		[
+			"Writes code with security principles in mind.",
+			"Identifies security gaps in own work and team assignments.",
+			"Actively works towards closing this gap.",
+			"Promotes the secure by design principle.",
+			"Participates in risk assessments.",
+			"Is familiar with security pyramid concept."
+		],
+		[
+			"Understands the security & compliance standards, policies and procedures of his/her team.",
+			"Challenges the security of new features.",
+			"Ensures that security risks are analysed and managed with respect to data and information security standards and policies.",
+			"Represents the security stand of the own team.",
+			"Is involved in risk assessments and Business Impact Analysis.",
+			"Is aware of the rists and vulnerabilities outlined by OWASP top 10 for Web."
+		],
+		[
+			"Reviews security incidents.",
+			"Implements necessary security techniques.",
+			"Defines, proposes and implements necessary security techniques, key controls and practises in compliance with security policy and regulations.",
+			"Makes recommendations for security guidelines and policy standards to ensure continuous improvement of security provision.",
+			"Provides leadership for enhancing the integrity, confidentiality and availability of data.",
+			"Proactively works on mitigating risks and reducing security flaw."
+		],
+		[
+			"Oversees IT security risks throughout the entire organisation.",
+			"Participates in security governance process and its succession.",
+			"Is the go-to person for assesing and mitigating risks for other teams.",
+			"Advises senior management on security topics."
+		]
+	],
+	"leadership": [
+		[
+			"Can step up at times and take leading role in a team.",
+			"Is able to mediate and solve simple problems within a group.",
+			"Needs a mentor figure or further training to progress with leading."
+		],
+		[
+			"Has effective communication skills and knows how to tailor a good message.",
+			"Acts with integrity in private and in public.",
+			"Knows the basics on how to navigate sensitive situations in a group.",
+			"Proactively nurtures conversations on how to share knowledge and develop a shared vision inside team.",
+			"Is aware of the accountability involved in leading a team."
+		],
+		[
+			"Proactively builds and improves trust and loyal relationships between team members.",
+			"Is at ease and comfortable being in lead of a group most of the time.",
+			"Creates opportunities for knowledge sharing and inspires the team to participate.",
+			"Knows when to delegate, to whom and what.",
+			"Can skillfully identify, prevent and resolve conflicts.",
+			"Understands that a healthy climate and work-life balance within the team leads to better long term performance.",
+			"Participates in the process to include new team members and identify what personality(ies) would fit the current team.",
+			"Fulfills business expectations with regards to deliverables and inspires the team to achieve the goal."
+		],
+		[
+			"Is highly valued from (or forms part of) senior management.",
+			"Is able to effectively manage a (distributed) team as a self-sufficient unit.",
+			"Aligns team strategy with other cross-functional teams and provides input for organizational improvement."
+		],
+		[
+			"Innovates the way forward by offering a compelling vision for the whole team/organisation.",
+			"Inspires whole organisation or industry with his/her approach, goals and values.",
+			"Other team leads might often seek his/her input and advice.",
+			"Helps others to reach their full potential."
+		]
+	],
+	"consulting": [
+		[
+			"Is aware of importance of clear communication good work ethic.",
+			"Understanding that continous learning is part of the job.",
+			"Has positive attitude and willingness to cooperate."
+		],
+		[
+			"Critical thinking and professional mindset when advising clients.",
+			"Empathy with peers and subordinates.",
+			"Is able to manage time effectively."
+		],
+		[
+			"Has effective communication skills and knows how to tailor a good message.",
+			"Is comfortable with speaking in public.",
+			"Good interpresonal skills.",
+			"Able to work under pressure."
+		],
+		[
+			"Has mastered presenting information and own arguments well.",
+			"Is able to communicate effectively with various personalities.",
+			"Utilizes intra-organisation network and is able to leverage it for finding solutions to problems."
+		],
+		[
+			"Can handle negotiations on behalf of employer or client.",
+			"Is able to leverage own network for business development.",
+			"Proactively upsells and finds a fit between problem and consulting services.",
+			"Is an expert in at least 1 another specific domain."
+		]
+	]
+}

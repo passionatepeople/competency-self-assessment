@@ -1,0 +1,35 @@
+[
+	[
+		"Executes structured manual or automated test cases.",
+		"Records and communicates findings so that they are clear and reproducible.",
+		"Specifies test cases based on acceptance criteria."
+	],
+	[
+		"Is able to update existing cases to match new requirements.",
+		"In case of findings, provides analysis and information needed to resolve the issue.",
+		"Guides other colleagues in carrying out tests.",
+		"Applies exploratory testing based on the basis of domain knowledge.",
+		"Is familiar with the Testing Pyramid concept."
+	],
+	[
+		"Sets up and writes tests.",
+		"Improves existing test tool setups.",
+		"Designs tests with the end user in mind.",
+		"Evaluates the application performance and comes up with ways to test this automatically.",
+		"Perfoms a product risk analysis to achieve the most efficient test coverage possible.",
+		"Understands the impact and implied risks of failing tests."
+	],
+	[
+		"Sets up a test strategy, selects the most appropriate test tool, implements and configures it.",
+		"Understands relationships/dependencies and risks between systems, teams and business units.",
+		"Sets standards for test artifacts and metrics.",
+		"Draws and implements a cross-team test strategy.",
+		"Provides improvements for test infrastructure and test data."
+	],
+	[
+		"Advocates for testing culture.",
+		"Innovates the testing field within organisation.",
+		"Actively evaluates the quality standards and expands/improves them as necessary.",
+		"Advises and challenges senior management on quality-related topics."
+	]
+]

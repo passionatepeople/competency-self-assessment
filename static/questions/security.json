@@ -1,0 +1,38 @@
+[
+	[
+		"Understands why security is important.",
+		"Is aware about the concept of sensitive data (BSN, personal data, salary, revenue, financial information etc..",
+		"Is aware about GDPR principles.",
+		"Is aware about different threats."
+	],
+	[
+		"Writes code with security principles in mind.",
+		"Identifies security gaps in own work and team assignments.",
+		"Actively works towards closing this gap.",
+		"Promotes the secure by design principle.",
+		"Participates in risk assessments.",
+		"Is familiar with security pyramid concept."
+	],
+	[
+		"Understands the security & compliance standards, policies and procedures of his/her team.",
+		"Challenges the security of new features.",
+		"Ensures that security risks are analysed and managed with respect to data and information security standards and policies.",
+		"Represents the security stand of the own team.",
+		"Is involved in risk assessments and Business Impact Analysis.",
+		"Is aware of the rists and vulnerabilities outlined by OWASP top 10 for Web."
+	],
+	[
+		"Reviews security incidents.",
+		"Implements necessary security techniques.",
+		"Defines, proposes and implements necessary security techniques, key controls and practises in compliance with security policy and regulations.",
+		"Makes recommendations for security guidelines and policy standards to ensure continuous improvement of security provision.",
+		"Provides leadership for enhancing the integrity, confidentiality and availability of data.",
+		"Proactively works on mitigating risks and reducing security flaw."
+	],
+	[
+		"Oversees IT security risks throughout the entire organisation.",
+		"Participates in security governance process and its succession.",
+		"Is the go-to person for assesing and mitigating risks for other teams.",
+		"Advises senior management on security topics."
+	]
+]
