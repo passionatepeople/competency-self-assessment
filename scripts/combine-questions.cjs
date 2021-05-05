@@ -1,18 +1,27 @@
 #!/usr/bin/env node
 
+const category = (name, slug = name.toLowerCase()) => ({
+	name,
+	slug,
+	questions: require(`../static/questions/${slug}.json`).reduce((result, levelQuestions, level) => {
+		for (const question of levelQuestions) result.push({ question, level });
+		return result;
+	}, [])
+});
+
 process.stdout.write(
 	JSON.stringify(
-		{
-			principles: require('../static/questions/principles.json'),
-			development: require('../static/questions/development.json'),
-			testing: require('../static/questions/testing.json'),
-			cicd: require('../static/questions/cicd.json'),
-			uiux: require('../static/questions/uiux.json'),
-			infrastructure: require('../static/questions/infrastructure.json'),
-			security: require('../static/questions/security.json'),
-			leadership: require('../static/questions/leadership.json'),
-			consulting: require('../static/questions/consulting.json')
-		},
+		[
+			category('Principles'),
+			category('Development'),
+			category('Testing'),
+			category('CI / CD', 'cicd'),
+			category('UI / UX', 'uiux'),
+			category('Infrastructure'),
+			category('Security'),
+			category('Leadership'),
+			category('Consulting')
+		],
 		null,
 		'\t'
 	)

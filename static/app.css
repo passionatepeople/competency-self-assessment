@@ -1,0 +1,139 @@
+body {
+	margin: 0;
+	background: #eee;
+	font-size: 1.25rem;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+
+h1 {
+	font-size: 2rem;
+	margin: 2rem 0;
+}
+
+h2 {
+	font-size: 1.75rem;
+}
+
+/* p:first-of-type { */
+/* 	font-size: 1.4rem; */
+/* } */
+
+main {
+	box-sizing: border-box;
+	background: #fff;
+	margin: 0 auto;
+	padding: 3%;
+}
+
+@media screen and (min-width: 56rem) {
+	main {
+		max-width: 52rem;
+		padding: 2rem;
+		margin: 2rem auto;
+	}
+	h1:first-child {
+		margin-top: 0;
+	}
+}
+
+form {
+	margin: 4rem 0;
+	display: flex;
+	flex-direction: column;
+}
+
+fieldset {
+	border: 0;
+	padding: 0.01em 0 0 0;
+	margin: 0 0 4rem 0;
+	min-width: 0;
+}
+
+body:not(:-moz-handler-blocked) fieldset {
+	display: table-cell;
+}
+
+legend {
+	padding: 0;
+	margin: 0 0 2rem 0;
+	display: table;
+}
+
+legend h2 {
+	margin: 0;
+}
+
+fieldset fieldset {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	align-items: stretch;
+}
+
+fieldset legend + fieldset {
+	margin-top: 0;
+}
+
+fieldset fieldset legend {
+	margin: 0 0 1rem 0;
+	grid-row: span 4;
+	font-weight: 700;
+}
+
+fieldset fieldset label {
+	position: relative;
+	display: grid;
+	align-items: stretch;
+}
+
+fieldset fieldset input[type='radio'] {
+	position: absolute;
+	top: 1rem;
+	opacity: 0;
+}
+
+fieldset fieldset input[type='radio'] + span {
+	padding: 0.5rem;
+	text-align: center;
+	display: grid;
+	align-items: center;
+	border: 0.2rem solid transparent;
+}
+
+fieldset fieldset input[type='radio']:focus + span {
+	outline: 0.2rem dotted #382c63;
+}
+
+fieldset fieldset input[type='radio']:focus:not(:focus-visible) + span {
+	outline: none;
+}
+
+fieldset fieldset input[type='radio']:hover + span {
+	background: #ddd8ef;
+}
+
+fieldset fieldset input[type='radio']:checked + span {
+	border-color: #382c63;
+}
+
+button {
+	padding: 1.5rem 2rem;
+	font-size: 1.25rem;
+	border: 0;
+	cursor: pointer;
+	background: #382c63;
+	color: #fff;
+	align-self: center;
+}
+
+button:hover {
+	background: #31245d;
+}
+
+button:focus {
+	outline: 0.2rem dotted #382c63;
+}
+
+button:focus:not(:focus-visible) {
+	outline: none;
+}
+
