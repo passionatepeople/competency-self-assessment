@@ -3,4 +3,4 @@ node_modules
 /.svelte-kit
 /build
 /functions
-.netlify
+.netlify/state.json
