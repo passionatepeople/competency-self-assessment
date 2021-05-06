@@ -63,7 +63,7 @@ legend h2 {
 	margin: 0;
 }
 
-fieldset fieldset {
+fieldset > div {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	align-items: stretch;
@@ -75,7 +75,6 @@ fieldset legend + fieldset {
 
 fieldset fieldset legend {
 	margin: 0 0 1rem 0;
-	grid-row: span 4;
 	font-weight: 700;
 }
 

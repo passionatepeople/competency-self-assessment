@@ -29,42 +29,44 @@
 			{#each category.questions as question, index}
 				<fieldset>
 					<legend>{question.question}</legend>
-					<label
-						><input
-							type="radio"
-							name="{category.slug}-{question.level}-{index}"
-							value="0"
-							required
-						/>
-						<span>Fully disagree</span></label
-					>
-					<label
-						><input
-							type="radio"
-							name="{category.slug}-{question.level}-{index}"
-							value="1"
-							required
-						/>
-						<span>Mostly disagree</span></label
-					>
-					<label
-						><input
-							type="radio"
-							name="{category.slug}-{question.level}-{index}"
-							value="2"
-							required
-						/>
-						<span>Mostly agree</span></label
-					>
-					<label
-						><input
-							type="radio"
-							name="{category.slug}-{question.level}-{index}"
-							value="3"
-							required
-						/>
-						<span>Fully agree</span></label
-					>
+					<div>
+						<label
+							><input
+								type="radio"
+								name="{category.slug}-{question.level}-{index}"
+								value="0"
+								required
+							/>
+							<span>Fully disagree</span></label
+						>
+						<label
+							><input
+								type="radio"
+								name="{category.slug}-{question.level}-{index}"
+								value="1"
+								required
+							/>
+							<span>Mostly disagree</span></label
+						>
+						<label
+							><input
+								type="radio"
+								name="{category.slug}-{question.level}-{index}"
+								value="2"
+								required
+							/>
+							<span>Mostly agree</span></label
+						>
+						<label
+							><input
+								type="radio"
+								name="{category.slug}-{question.level}-{index}"
+								value="3"
+								required
+							/>
+							<span>Fully agree</span></label
+						>
+					</div>
 				</fieldset>
 			{/each}
 		</fieldset>
