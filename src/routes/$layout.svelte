@@ -9,4 +9,10 @@
 	};
 </script>
 
-<slot></slot>
+<main>
+	<slot></slot>
+</main>
+
+<footer>
+	v{process.env.VERSION}
+</footer>

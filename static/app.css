@@ -1,4 +1,11 @@
+html, body {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
 body {
+	flex: 1 0 100%;
 	margin: 0;
 	background: #eee;
 	font-size: 1.25rem;
@@ -14,15 +21,20 @@ h2 {
 	font-size: 1.75rem;
 }
 
-/* p:first-of-type { */
-/* 	font-size: 1.4rem; */
-/* } */
-
 main {
+	flex: 1 0 100%;
 	box-sizing: border-box;
+	width: 100%;
 	background: #fff;
 	margin: 0 auto;
 	padding: 3%;
+}
+
+footer {
+	padding: 3%;
+	text-align: center;
+	background: #fff;
+	color: #444;
 }
 
 @media screen and (min-width: 56rem) {
@@ -30,6 +42,11 @@ main {
 		max-width: 52rem;
 		padding: 2rem;
 		margin: 2rem auto;
+	}
+	footer {
+		padding: 0 2rem 2rem 2rem;
+		background: none;
+		color: #333;
 	}
 	h1:first-child {
 		margin-top: 0;
