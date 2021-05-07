@@ -2,7 +2,7 @@
   "name": "pp-competency-evaluation",
   "version": "0.0.3",
   "scripts": {
-    "prebuild": "[ $CI = true ] && npx pnpm install",
+    "prebuild": "[ \"$CI\" = true ] && npx pnpm install || echo Skipping prebuild",
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
     "preview": "svelte-kit preview",
