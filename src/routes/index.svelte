@@ -8,14 +8,8 @@
 
 <script lang="ts">
 	import type { Questionnaire } from './_questionnaire';
-	import { shuffle } from './_questionnaire';
 
 	export let questionnaire: Questionnaire;
-
-	$: questions = questionnaire.questions.map((category) => ({
-		...category,
-		questions: shuffle(category.questions),
-	}));
 </script>
 
 <h1>Competency self-evaluation</h1>
@@ -23,7 +17,7 @@
 <p>This tool is intended to help you assess your "T-shaped skills".</p>
 
 <form action="/result" method="get">
-	{#each questions as category}
+	{#each questionnaire.questions as category}
 		<fieldset>
 			<legend><h2>{questionnaire.categories[category.slug]}</h2></legend>
 			{#each category.questions as question, index}
