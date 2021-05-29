@@ -49,20 +49,27 @@
 
 			{#each questionnaire.categories[$currentCategory].questions as question, index}
 				<fieldset>
-					<legend>{question.text}</legend>
-					<div>
-						{#each agreementGrades as grade, gradeIndex}
-							<label
-								><input
-									type="radio"
-									bind:group={$answers[$currentCategory][index]}
-									value={gradeIndex}
-									required
-								/>
-								<span>{grade}</span>
-							</label>
-						{/each}
-					</div>
+					<legend>
+						{question.text}
+						{#if $answers[$currentCategory][index] !== null}
+							<strong on:click={() => $answers[$currentCategory][index] = null}>{agreementGrades[$answers[$currentCategory][index]]}</strong>
+						{/if}
+					</legend>
+					{#if $answers[$currentCategory][index] === null}
+						<div>
+							{#each agreementGrades as grade, gradeIndex}
+								<label
+									><input
+										type="radio"
+										bind:group={$answers[$currentCategory][index]}
+										value={gradeIndex}
+										required
+									/>
+									<span>{grade}</span>
+								</label>
+							{/each}
+						</div>
+					{/if}
 				</fieldset>
 			{/each}
 		</fieldset>
