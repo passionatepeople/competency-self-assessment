@@ -8,6 +8,7 @@
 
 <script lang="ts">
 	import type { Questionnaire } from './_questionnaire';
+	import { category } from '../stores.js';
 
 	export let questionnaire: Questionnaire;
 </script>
@@ -16,13 +17,14 @@
 
 <p>This tool is intended to help you assess your "T-shaped skills" and help you find areas would you like focus on for growth.</p>
 
-<form action="/result" method="get">
-	{#each questionnaire.questions as category}
+<div class="form-frame">
+
+	<form action="/result" method="get">
 		<fieldset>
-			<legend><h2>{questionnaire.categories[category.slug]}</h2></legend>
-			{#each category.questions as question, index}
+			<legend> <h2> {questionnaire.categories[$category].name} </h2> </legend>
+			{#each questionnaire.categories[$category].questions as question, index}
 				<fieldset>
-					<legend>{question.question}</legend>
+					<legend>{question.text}</legend>
 					<div>
 						<label
 							><input
@@ -64,6 +66,28 @@
 				</fieldset>
 			{/each}
 		</fieldset>
-	{/each}
-	<button>Submit</button>
-</form>
+		<button>Next</button>
+	</form>
+
+	<aside>
+		<h2> {questionnaire.categories[$category].name} </h2>
+
+	</aside>
+
+</div>
+
+
+<style>
+	.form-frame {
+		display: flex;
+		flex-direction: row;
+	}
+	.form-frame form {
+		flex: 1 0 75%;
+	}
+	.form-frame aside {
+		flex: 1 0 25%;
+	}
+
+
+</style>
