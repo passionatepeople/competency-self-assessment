@@ -22,4 +22,4 @@ $ pnpm run build
 - [ ] Enhance form to use client-side router on submit.
 - [ ] Improve result visualisation, e.g. via `<td>` background color.
 - [ ] Page title, favicon, manifest and all that jazz.
-- [ ] Add a `LICENSE`
+- [x] Add a `LICENSE`
