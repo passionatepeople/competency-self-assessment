@@ -55,7 +55,7 @@
 							<label
 								><input
 									type="radio"
-									name="{$currentCategory}-{question.level}-{index}"
+									name="{$currentCategory}-{index}"
 									bind:group={$answers[$currentCategory][index]}
 									value={gradeIndex}
 									required
