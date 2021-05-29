@@ -8,6 +8,7 @@
 
 <script lang="ts">
 	import type { Questionnaire, Answers } from './_questionnaire';
+	import type { Writable } from 'svelte/store';
 	import { currentCategory, completedCategories } from '../stores.js';
 
 	export let questionnaire: Questionnaire;
@@ -20,6 +21,14 @@
 
 	function handleOnSubmit() {
 		console.log(answers);
+		const currentCategoryIndex = categories.indexOf($currentCategory);
+		if (currentCategoryIndex <= categories.length - 2) {
+			(completedCategories as Writable<string[]>).set([...$completedCategories, $currentCategory]);
+			$currentCategory = categories[currentCategoryIndex + 1];
+		} else {
+			// time for results
+		}
+
 	}
 
 </script>
@@ -61,11 +70,15 @@
 	<aside>
 		<ul>
 			{#each categories as cat}
-				<li class:completed={$completedCategories.includes(cat)} class:active={cat === $currentCategory}>
+				<li
+					class:completed={$completedCategories.includes(cat)}
+					class:active={cat === $currentCategory}
+					on:click={() => $completedCategories.includes(cat) ? $currentCategory = cat : null}
+				>
 					{questionnaire.categories[cat].name}
 					({questionnaire.categories[cat].questions.length})
 					{#if $completedCategories.includes(cat)}
-						✅
+						<span >✅</span>
 					{/if}
 				</li>
 			{/each}
@@ -105,6 +118,7 @@
 	}
 	aside ul li.completed {
 		color: rgb(6, 160, 6);
+		cursor: pointer;
 	}
 
 	aside ul li.active {
