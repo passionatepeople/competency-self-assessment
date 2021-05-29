@@ -14,7 +14,7 @@
 
 <h1>Competency self-evaluation</h1>
 
-<p>This tool is intended to help you assess your "T-shaped skills".</p>
+<p>This tool is intended to help you assess your "T-shaped skills" and help you find areas would you like focus on for growth.</p>
 
 <form action="/result" method="get">
 	{#each questionnaire.questions as category}

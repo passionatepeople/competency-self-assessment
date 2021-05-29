@@ -15,7 +15,6 @@ process.stdout.write(
 	JSON.stringify(
 		{
 			categories: {
-				p: 'Principles',
 				d: 'Development',
 				t: 'Testing',
 				ci: 'CI / CD',
@@ -25,9 +24,8 @@ process.stdout.write(
 				l: 'Leadership',
 				c: 'Consulting',
 			},
-			levels: ['Novice', 'Beginner', 'Competent', 'Proficient', 'Expert'],
+			levels: ['Novice', 'Advanced Beginner', 'Competent', 'Proficient', 'Expert'],
 			questions: [
-				questions('principles', 'p'),
 				questions('development', 'd'),
 				questions('testing', 't'),
 				questions('cicd', 'ci'),

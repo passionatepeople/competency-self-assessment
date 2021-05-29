@@ -1,6 +1,5 @@
 {
 	"categories": {
-		"p": "Principles",
 		"d": "Development",
 		"t": "Testing",
 		"ci": "CI / CD",
@@ -12,93 +11,12 @@
 	},
 	"levels": [
 		"Novice",
-		"Beginner",
+		"Advanced Beginner",
 		"Competent",
 		"Proficient",
 		"Expert"
 	],
 	"questions": [
-		{
-			"slug": "p",
-			"questions": [
-				{
-					"question": "None to limited knowledge/experience.",
-					"level": 0
-				},
-				{
-					"question": "Needs instructions and clear work processes to be able to work.",
-					"level": 0
-				},
-				{
-					"question": "The primairy focus of work is within a team.",
-					"level": 0
-				},
-				{
-					"question": "Knows how to retreive and share knowledge in his/her area.",
-					"level": 1
-				},
-				{
-					"question": "Can execute simple tasks, but can not fully work independently.",
-					"level": 1
-				},
-				{
-					"question": "Begins to recognize patterns and acts accordingly.",
-					"level": 1
-				},
-				{
-					"question": "Can work independently.",
-					"level": 2
-				},
-				{
-					"question": "Supports (new) teammembers.",
-					"level": 2
-				},
-				{
-					"question": "Has a broader view on dependencies from different teams within organisation.",
-					"level": 2
-				},
-				{
-					"question": "Proactivley gaining knowledge outside his/her own domain.",
-					"level": 2
-				},
-				{
-					"question": "Structurally improves the quality within his/her area of expertise.",
-					"level": 3
-				},
-				{
-					"question": "Coaches colleagues.",
-					"level": 3
-				},
-				{
-					"question": "Can handle discussions at senior management & business level.",
-					"level": 3
-				},
-				{
-					"question": "Is seen as authority on his/her domain, inside and outside organisation.",
-					"level": 4
-				},
-				{
-					"question": "Is a visionairy, sets standards, and innovates.",
-					"level": 4
-				},
-				{
-					"question": "Has a leading role in complex cross-team and cross-discipline issues.",
-					"level": 4
-				},
-				{
-					"question": "The go-to person for approaching problems from multiple perspectives.",
-					"level": 4
-				},
-				{
-					"question": "Intuitive and analytical decision-making.",
-					"level": 4
-				},
-				{
-					"question": "Knows the in's and outs of this domain and uses that to inspire peopl.",
-					"level": 4
-				}
-			]
-		},
 		{
 			"slug": "d",
 			"questions": [
