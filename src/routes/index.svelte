@@ -43,7 +43,7 @@
 
 <div class="form-frame">
 
-	<form on:submit|preventDefault={handleOnSubmit}>
+	<form>
 		<fieldset>
 			<legend> <h2>{questionnaire.categories[$currentCategory].name}</h2></legend>
 
@@ -55,7 +55,6 @@
 							<label
 								><input
 									type="radio"
-									name="{$currentCategory}-{index}"
 									bind:group={$answers[$currentCategory][index]}
 									value={gradeIndex}
 									required
@@ -67,27 +66,29 @@
 				</fieldset>
 			{/each}
 		</fieldset>
-		<button>Next</button>
 	</form>
 
 	<aside>
-		<ul>
-			{#each categories as cat}
-				<li
-					class:completed={$completedCategories.includes(cat)}
-					class:active={cat === $currentCategory}
-					on:click={() => $completedCategories.includes(cat) ? $currentCategory = cat : null}
-				>
-					{questionnaire.categories[cat].name}
-					({$answers[cat].filter(a => a !== null).length}/{questionnaire.categories[cat].questions.length})
-					{#if $completedCategories.includes(cat)}
-						<span >✅</span>
-					{/if}
-				</li>
-			{/each}
+		<div class="sticky">
+			<ul>
+				{#each categories as cat}
+					<li
+						class:completed={$completedCategories.includes(cat)}
+						class:active={cat === $currentCategory}
+						on:click={() => $completedCategories.includes(cat) ? $currentCategory = cat : null}
+					>
+						{questionnaire.categories[cat].name}
+						({$answers[cat].filter(a => a !== null).length}/{questionnaire.categories[cat].questions.length})
+						{#if $completedCategories.includes(cat)}
+							<span >✅</span>
+						{/if}
+					</li>
+				{/each}
 
-		</ul>
+			</ul>
 
+			<button on:click={handleOnSubmit} disabled={$answers[$currentCategory].some(a => a === null)}>Next</button>
+		</div>
 	</aside>
 
 </div>
@@ -107,13 +108,18 @@
 
 	aside {
 		position: relative;
+		padding: 0 30px;
+	}
+
+	aside .sticky {
+		top: 20px;
+		position: sticky;
 	}
 
 	aside ul {
 		list-style: none;
 		margin-left: 0;
-		top: 20px;
-		position: sticky;
+		padding-left: 0;
 	}
 
 	aside ul li {

@@ -135,18 +135,23 @@ fieldset fieldset input[type='radio']:checked + span {
 }
 
 button {
-	padding: 1.5rem 2rem;
+	padding: 1rem 7rem;
 	font-size: 1.25rem;
 	font-weight: 100;
 	border: 0;
 	cursor: pointer;
-	background: #382c63;
+	background: #604ea0;
 	color: #fff;
 	align-self: center;
 }
 
 button:hover {
 	background: #31245d;
+}
+
+button:disabled {
+	background: #bbb;
+	cursor: not-allowed;
 }
 
 button:focus {
