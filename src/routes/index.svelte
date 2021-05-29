@@ -7,15 +7,19 @@
 </script>
 
 <script lang="ts">
-	import type { Questionnaire } from './_questionnaire';
+	import type { Questionnaire, Answers } from './_questionnaire';
 	import { currentCategory, completedCategories } from '../stores.js';
 
 	export let questionnaire: Questionnaire;
 
 	let categories = Object.keys(questionnaire.categories);
+	let answers: Answers = questionnaire.categories[$currentCategory].questions
+		.reduce((acc, { level }, idx) => ({ ...acc, [`${$currentCategory}-${level}-${idx}`]: null }), {})
+
+	let agreementGrades = ['Fully disagree', 'Mostly disagree', 'Mostly agree', 'Fully agree'];
 
 	function handleOnSubmit() {
-		Object.entries(this);
+		console.log(answers);
 	}
 
 </script>
@@ -23,7 +27,7 @@
 <h1>Competency self-evaluation</h1>
 
 <p>This tool is intended to help you assess your "T-shaped skills" and help you find areas would you like focus on for growth.</p>
-<p>Please proceed through the steps and select how much each of the statements describe your professional ca</p>
+<p>Please proceed through the steps and select how much each of the statements describe you</p>
 
 <div class="form-frame">
 
@@ -35,42 +39,18 @@
 				<fieldset>
 					<legend>{question.text}</legend>
 					<div>
-						<label
-							><input
-								type="radio"
-								name="{$currentCategory}-{question.level}-{index}"
-								value="0"
-								required
-							/>
-							<span>Fully disagree</span>
-						</label>
-						<label
-							><input
-								type="radio"
-								name="{$currentCategory}-{question.level}-{index}"
-								value="1"
-								required
-							/>
-							<span>Mostly disagree</span>
-						</label>
-						<label
-							><input
-								type="radio"
-								name="{$currentCategory}-{question.level}-{index}"
-								value="2"
-								required
-							/>
-							<span>Mostly agree</span>
-						</label>
-						<label
-							><input
-								type="radio"
-								name="{$currentCategory}-{question.level}-{index}"
-								value="3"
-								required
-							/>
-							<span>Fully agree</span>
-						</label>
+						{#each agreementGrades as grade, gradeIndex}
+							<label
+								><input
+									type="radio"
+									name="{$currentCategory}-{question.level}-{index}"
+									bind:group={answers[`${$currentCategory}-${question.level}-${index}`]}
+									value={gradeIndex}
+									required
+								/>
+								<span>{grade}</span>
+							</label>
+						{/each}
 					</div>
 				</fieldset>
 			{/each}
@@ -83,6 +63,7 @@
 			{#each categories as cat}
 				<li class:completed={$completedCategories.includes(cat)} class:active={cat === $currentCategory}>
 					{questionnaire.categories[cat].name}
+					({questionnaire.categories[cat].questions.length})
 					{#if $completedCategories.includes(cat)}
 						✅
 					{/if}

@@ -11,3 +11,7 @@ export type Category = {
 export type Questionnaire = {
 	categories: { [slug: string]: Category };
 };
+
+export type Answers = {
+	[slug: string]: null | number;
+}
