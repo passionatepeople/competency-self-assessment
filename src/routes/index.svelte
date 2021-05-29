@@ -7,20 +7,18 @@
 </script>
 
 <script lang="ts">
-	import type { Questionnaire, Answers } from './_questionnaire';
+	import type { Questionnaire } from './_questionnaire';
 	import type { Writable } from 'svelte/store';
-	import { currentCategory, completedCategories } from '../stores.js';
+	import { currentCategory, completedCategories, answers } from '../stores.js';
 
 	export let questionnaire: Questionnaire;
 
 	let categories = Object.keys(questionnaire.categories);
-	let answers: Answers = questionnaire.categories[$currentCategory].questions
-		.reduce((acc, { level }, idx) => ({ ...acc, [`${$currentCategory}-${level}-${idx}`]: null }), {})
 
 	let agreementGrades = ['Fully disagree', 'Mostly disagree', 'Mostly agree', 'Fully agree'];
 
 	function handleOnSubmit() {
-		console.log(answers);
+		console.log($answers);
 		const currentCategoryIndex = categories.indexOf($currentCategory);
 		if (currentCategoryIndex <= categories.length - 2) {
 			(completedCategories as Writable<string[]>).set([...$completedCategories, $currentCategory]);
@@ -30,6 +28,11 @@
 		}
 
 	}
+
+	answers.subscribe(val => {
+		console.log(val)
+	});
+
 
 </script>
 
@@ -53,7 +56,7 @@
 								><input
 									type="radio"
 									name="{$currentCategory}-{question.level}-{index}"
-									bind:group={answers[`${$currentCategory}-${question.level}-${index}`]}
+									bind:group={$answers[$currentCategory][index]}
 									value={gradeIndex}
 									required
 								/>
@@ -76,7 +79,7 @@
 					on:click={() => $completedCategories.includes(cat) ? $currentCategory = cat : null}
 				>
 					{questionnaire.categories[cat].name}
-					({questionnaire.categories[cat].questions.length})
+					({$answers[cat].filter(a => a !== null).length}/{questionnaire.categories[cat].questions.length})
 					{#if $completedCategories.includes(cat)}
 						<span >✅</span>
 					{/if}
