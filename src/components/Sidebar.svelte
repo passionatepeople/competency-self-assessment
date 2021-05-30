@@ -32,6 +32,7 @@
 
 <aside>
   <div class="sticky">
+    <progress value={filledQuestions} max={totalQuestions}> {(100 * filledQuestions/totalQuestions).toFixed(1)} %</progress>
     <ul>
       {#each categories as cat}
         <li
@@ -58,7 +59,6 @@
     </button>
 
     <br>
-    {filledQuestions}/{totalQuestions}
     <br>
     <span class="reset" on:click={reset}>Reset</span>
   </div>
@@ -94,9 +94,26 @@
     color: #333;
   }
 
+  progress {
+    width: calc(100% - 30px);
+    height: 20px;
+    border-radius: 4px;
+  }
+
+  progress::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 4px;
+  }
+
+  progress::-webkit-progress-value {
+    background-color: rgb(6, 160, 6);
+    border-radius: 4px;
+  }
+
   button {
-    padding: 1rem 3rem;
+    padding: 0.75rem;
     font-size: 1.25rem;
+    width: calc(100% - 30px);
     font-weight: 100;
     border: 0;
     cursor: pointer;
