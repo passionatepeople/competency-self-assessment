@@ -2,7 +2,7 @@
   import { currentCategory, answers } from '../stores.js';
   let agreementGrades = ['Fully disagree', 'Mostly disagree', 'Mostly agree', 'Fully agree'];
 
-	export let question: string;
+  export let question: string;
   export let index: number;
 </script>
 

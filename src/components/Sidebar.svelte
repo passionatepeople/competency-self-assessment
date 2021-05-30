@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { Questionnaire } from 'src/routes/_questionnaire.js';
-	import type { Writable } from 'svelte/store';
+  import type { Writable } from 'svelte/store';
   import { currentCategory, completedCategories, answers, resetAll } from '../stores.js';
   export let questionnaire: Questionnaire;
 
@@ -65,34 +65,34 @@
 </aside>
 
 <style>
-	aside {
+  aside {
     flex: 1 0 25%;
-		position: relative;
-		padding: 0 30px;
-	}
+    position: relative;
+    padding: 0 30px;
+  }
 
-	aside .sticky {
-		top: 20px;
-		position: sticky;
-	}
+  aside .sticky {
+    top: 20px;
+    position: sticky;
+  }
 
-	aside ul {
-		list-style: none;
-		margin-left: 0;
-		padding-left: 0;
-	}
+  aside ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
 
-	aside ul li {
-		color: #aaa;
-	}
-	aside ul li.completed {
-		color: rgb(6, 160, 6);
-		cursor: pointer;
-	}
+  aside ul li {
+    color: #aaa;
+  }
+  aside ul li.completed {
+    color: rgb(6, 160, 6);
+    cursor: pointer;
+  }
 
-	aside ul li.active {
-		color: #333;
-	}
+  aside ul li.active {
+    color: #333;
+  }
 
   button {
     padding: 1rem 3rem;
