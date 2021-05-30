@@ -18,7 +18,7 @@ $ pnpm run build
 
 ## Wish list:
 
-- [ ] Enhance form to use client-side router on submit.
-- [ ] Improve result visualisation, e.g. via `<td>` background color.
+- [x] Enhance form to use client-side router on submit.
+- [x] Improve result visualisation, e.g. via `<td>` background color.
 - [ ] Page title, favicon, manifest and all that jazz.
 - [x] Add a `LICENSE`
