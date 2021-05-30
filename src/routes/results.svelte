@@ -15,6 +15,8 @@
 
   export let questionnaire: Questionnaire;
 
+  let agreementGrades = ['Fully disagree', 'Mostly disagree', 'Mostly agree', 'Fully agree'];
+
   let categories = Object.keys(questionnaire.categories);
 
   function cell (cat: string, levelIdx: number) {
@@ -64,7 +66,7 @@
       {#each categories as cat}
       <td
         style="background-color: {cell(cat, levelIdx).bg}"
-        on:click={() => alert(JSON.stringify(cell(cat, levelIdx).info))}
+        on:click={() => alert(cell(cat, levelIdx).info.map(i => `${i.text} - ${agreementGrades[i.answer]}`).join('\n\n'))}
       >
         {cell(cat, levelIdx).text}
       </td>
