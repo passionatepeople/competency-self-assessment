@@ -21,18 +21,14 @@ const getFromLS = (key) => {
 }
 
 export const currentCategory = writable(getFromLS('currentCategory') || 'development');
-export const completedCategories = writable(getFromLS('completedCategories') || []);
 export const answers = writable(getFromLS('answers') || blankAnswers);
 
 export const resetAll = () => {
   currentCategory.set('development');
-  completedCategories.set([]);
   answers.set(blankAnswers);
 }
 
 // sync with local storage
 const writeToLS = (key) => (value) => typeof window !== 'undefined' && localStorage.setItem(key, JSON.stringify(value));
 currentCategory.subscribe(writeToLS('currentCategory'));
-completedCategories.subscribe(writeToLS('completedCategories'));
 answers.subscribe(writeToLS('answers'));
-

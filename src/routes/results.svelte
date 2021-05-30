@@ -17,13 +17,9 @@
 
 	export let questionnaire: Questionnaire;
 
-	const results: Results =
-		typeof window !== 'undefined'
-			? queryToResults(new URLSearchParams(window.location.search))
-			: {};
 </script>
 
-<h1>Result</h1>
+<h1> Results </h1>
 
 <table>
 	<tr>
@@ -32,7 +28,7 @@
 			<th scope="col">{level}</th>
 		{/each}
 	</tr>
-	{#each questionnaire.questions as { slug }}
+	<!-- {#each questionnaire.questions as { slug }}
 		{#if results[slug]}
 			<tr>
 				<th scope="row">{questionnaire.categories[slug]}</th>
@@ -41,5 +37,5 @@
 				{/each}
 			</tr>
 		{/if}
-	{/each}
+	{/each} -->
 </table>

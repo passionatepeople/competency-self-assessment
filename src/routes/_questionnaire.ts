@@ -10,6 +10,7 @@ export type Category = {
 
 export type Questionnaire = {
 	categories: { [slug: string]: Category };
+	levels: string[];
 };
 
 export type Answers = {

@@ -1,21 +1,18 @@
 <script lang="ts">
   import type { Questionnaire } from 'src/routes/_questionnaire.js';
-  import type { Writable } from 'svelte/store';
-  import { currentCategory, completedCategories, answers, resetAll } from '../stores.js';
+  import { currentCategory, answers, resetAll } from '../stores.js';
   export let questionnaire: Questionnaire;
 
   let categories = Object.keys(questionnaire.categories);
 
   function handleOnSubmit() {
-    console.log($answers);
     const currentCategoryIndex = categories.indexOf($currentCategory);
-    if (currentCategoryIndex <= categories.length - 2) {
-      (completedCategories as Writable<string[]>).set([...$completedCategories, $currentCategory]);
-      $currentCategory = categories[currentCategoryIndex + 1];
-    } else {
-      // time for results
-    }
 
+    if (Object.values($answers).flat().every(a => a !== null)) {
+      window.location.assign('/results');
+    } else if (currentCategoryIndex <= categories.length - 2) {
+      $currentCategory = categories[currentCategoryIndex + 1];
+    }
   }
 
   function reset() {
@@ -36,14 +33,14 @@
     <ul>
       {#each categories as cat}
         <li
-          class:completed={$completedCategories.includes(cat)}
+          class:completed={$answers[cat].every(a => a !== null)}
           class:active={cat === $currentCategory}
-          on:click={() => $completedCategories.includes(cat) ? $currentCategory = cat : null}
+          on:click={() => $answers[cat].some(a => a !== null) ? $currentCategory = cat : null}
         >
           {questionnaire.categories[cat].name}
           ({$answers[cat].filter(a => a !== null).length}/{questionnaire.categories[cat].questions.length})
-          {#if $completedCategories.includes(cat)}
-            <span >✅</span>
+          {#if $answers[cat].every(a => a !== null)}
+            <span>✅</span>
           {/if}
         </li>
       {/each}
