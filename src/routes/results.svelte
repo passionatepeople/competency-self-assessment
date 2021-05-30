@@ -33,9 +33,17 @@
       bg = `#${interpolateColor('ffffff', '55cc55', totalPoints / (catAnswers.length * 3))}`;
     }
 
+    const info = questionnaire.categories[cat].questions
+      .filter(q => q.level === levelIdx)
+      .map((q, i) => ({
+        text: q.text,
+        answer: catAnswers[i],
+      }));
+
     return {
       bg,
       text: `${percentage.toFixed(1)}%`,
+      info,
     };
   }
 
@@ -54,7 +62,12 @@
     <tr>
       <th scope="row"> {level} </th>
       {#each categories as cat}
-      <td style="background-color: {cell(cat, levelIdx).bg}"> {cell(cat, levelIdx).text} </td>
+      <td
+        style="background-color: {cell(cat, levelIdx).bg}"
+        on:click={() => alert(JSON.stringify(cell(cat, levelIdx).info))}
+      >
+        {cell(cat, levelIdx).text}
+      </td>
     {/each}
     </tr>
   {/each}
