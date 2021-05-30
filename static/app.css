@@ -91,6 +91,10 @@ fieldset > div {
 	margin-bottom: 4rem;
 }
 
+fieldset legend strong {
+	cursor: pointer;
+}
+
 fieldset legend + fieldset {
 	margin-top: 0;
 }
