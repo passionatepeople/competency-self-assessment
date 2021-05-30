@@ -83,7 +83,7 @@
     color: #aaa;
   }
   aside ul li.completed {
-    color: rgb(6, 160, 6);
+    color: #06a006;
     cursor: pointer;
   }
 
@@ -103,7 +103,7 @@
   }
 
   progress::-webkit-progress-value {
-    background-color: rgb(6, 160, 6);
+    background-color: #06a006;
     border-radius: 4px;
   }
 
