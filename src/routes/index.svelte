@@ -11,7 +11,7 @@
   import Statement from '../components/Statement.svelte';
   import Sidebar from '../components/Sidebar.svelte';
 
-  import { currentCategory, answers } from '../stores.js';
+  import { currentCategory } from '../stores.js';
 
   export let questionnaire: Questionnaire;
 </script>

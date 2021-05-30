@@ -153,6 +153,3 @@ th:first, td:first {
 	padding-left: 0;
 }
 
-tr:nth-child(odd) td {
-	background: #eee;
-}
