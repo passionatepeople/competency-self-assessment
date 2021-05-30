@@ -75,7 +75,7 @@ body:not(:-moz-handler-blocked) fieldset {
 
 legend {
 	padding: 0;
-	margin: 0 0 2rem 0;
+	margin: 0 0 1rem 0;
 	display: table;
 	font-weight: 300;
 }
@@ -137,34 +137,6 @@ fieldset fieldset input[type='radio']:hover + span {
 
 fieldset fieldset input[type='radio']:checked + span {
 	border-color: #382c63;
-}
-
-button {
-	padding: 1rem 7rem;
-	font-size: 1.25rem;
-	font-weight: 100;
-	border: 0;
-	cursor: pointer;
-	background: #604ea0;
-	color: #fff;
-	align-self: center;
-}
-
-button:hover {
-	background: #31245d;
-}
-
-button:disabled {
-	background: #bbb;
-	cursor: not-allowed;
-}
-
-button:focus {
-	outline: 0.2rem dotted #382c63;
-}
-
-button:focus:not(:focus-visible) {
-	outline: none;
 }
 
 table {
