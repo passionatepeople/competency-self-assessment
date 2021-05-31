@@ -83,12 +83,12 @@
     color: #aaa;
   }
   aside ul li.completed {
-    color: #06a006;
+    color: #4CCCA7;
     cursor: pointer;
   }
 
   aside ul li.active {
-    color: #333;
+    color: #fff;
   }
 
   progress {
@@ -103,7 +103,7 @@
   }
 
   progress::-webkit-progress-value {
-    background-color: #06a006;
+    background-color: #4CCCA7;
     border-radius: 4px;
   }
 
@@ -111,20 +111,20 @@
     padding: 0.75rem;
     font-size: 1.25rem;
     width: calc(100% - 30px);
-    font-weight: 100;
     border: 0;
     cursor: pointer;
-    background: #604ea0;
+    background: #392D63;
     color: #fff;
     align-self: center;
   }
 
   button:hover {
-    background: #31245d;
+    background: #251d41;
   }
 
   button:disabled {
-    background: #bbb;
+    background: rgba(200, 200, 200, .7);
+    color: #ccc;
     cursor: not-allowed;
   }
 
@@ -138,7 +138,11 @@
 
   .reset {
     cursor: pointer;
-    color: #604ea0;
+    color: #aaa;
+  }
+
+  .reset:hover {
+    color: #c00;
   }
 
 </style>

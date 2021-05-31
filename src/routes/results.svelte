@@ -30,9 +30,9 @@
 
     let bg = '#ffffff';
     if (totalPoints / (catAnswers.length * 3) === 1) {
-      bg = '#55cc55';
+      bg = '#4CCCA7';
     } else if (totalPoints / (catAnswers.length * 3) > 0) {
-      bg = `#${interpolateColor('ffffff', '55cc55', totalPoints / (catAnswers.length * 3))}`;
+      bg = `#${interpolateColor('ffffff', '4CCCA7', totalPoints / (catAnswers.length * 3))}`;
     }
 
     const info = questionnaire.categories[cat].questions

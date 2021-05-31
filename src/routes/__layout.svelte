@@ -10,6 +10,7 @@
 </script>
 
 <main>
+	<img class="logo" src="/logo.png" alt="Passionate People" />
 	<slot></slot>
 </main>
 

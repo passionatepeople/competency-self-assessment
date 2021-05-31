@@ -7,10 +7,18 @@ html, body {
 body {
 	flex: 1 0 100%;
 	margin: 0;
-	background: #eee;
 	font-size: 1.25rem;
 	font-family: 'Kanit', sans-serif;
 	font-weight: 300;
+	background: rgba(57,45,99,1) 50%;
+	background: linear-gradient(45deg, rgba(76,204,167,1) 0%, rgba(57,45,99,1) 50%, rgba(76,204,167,1) 100%);
+	background-attachment: fixed;
+	color: #fff;
+}
+
+img.logo {
+	height: 120px;
+	width: 250px;
 }
 
 h1 {
@@ -28,16 +36,16 @@ main {
 	flex: 1 0 100%;
 	box-sizing: border-box;
 	width: 100%;
-	background: #fff;
 	margin: 0 auto;
 	padding: 3%;
+	background: rgba(34, 26, 59, .7);
 }
 
 footer {
 	padding: 3%;
 	text-align: center;
 	background: #fff;
-	color: #444;
+	color: #aaa;
 }
 
 @media screen and (min-width: 56rem) {
