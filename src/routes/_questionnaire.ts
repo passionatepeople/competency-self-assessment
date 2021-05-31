@@ -1,15 +1,18 @@
 export type Question = {
-	question: string;
+	text: string;
 	level: 0 | 1 | 2 | 3 | 4;
 };
 
 export type Category = {
-	slug: string;
+	name: string;
 	questions: Question[];
 };
 
 export type Questionnaire = {
-	categories: { [slug: string]: string };
+	categories: { [slug: string]: Category };
 	levels: string[];
-	questions: Category[];
 };
+
+export type Answers = {
+	[slug: string]: null | number;
+}

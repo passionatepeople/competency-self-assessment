@@ -7,39 +7,54 @@ html, body {
 body {
 	flex: 1 0 100%;
 	margin: 0;
-	background: #eee;
 	font-size: 1.25rem;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+	font-family: 'Kanit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	background: rgba(57,45,99,1) 50%;
+	background: linear-gradient(45deg, rgba(76,204,167,1) 0%, rgba(57,45,99,1) 50%, rgba(76,204,167,1) 100%);
+	background-attachment: fixed;
+}
+
+img.logo {
+	height: 120px;
+	width: 250px;
 }
 
 h1 {
 	font-size: 2rem;
 	margin: 2rem 0;
+	font-weight: 400;
 }
 
 h2 {
 	font-size: 1.75rem;
+	font-weight: 400;
+}
+
+a {
+	color: #fff;
 }
 
 main {
 	flex: 1 0 100%;
 	box-sizing: border-box;
 	width: 100%;
-	background: #fff;
 	margin: 0 auto;
 	padding: 3%;
+	background: rgba(34, 26, 59, .7);
+	color: #fff;
 }
 
 footer {
 	padding: 3%;
 	text-align: center;
 	background: #fff;
-	color: #444;
+	color: #aaa;
 }
 
 @media screen and (min-width: 56rem) {
 	main {
-		max-width: 52rem;
+		max-width: 80%;
 		padding: 2rem;
 		margin: 2rem auto;
 	}
@@ -62,7 +77,7 @@ form {
 fieldset {
 	border: 0;
 	padding: 0.01em 0 0 0;
-	margin: 0 0 4rem 0;
+	margin: 0;
 	min-width: 0;
 }
 
@@ -72,8 +87,9 @@ body:not(:-moz-handler-blocked) fieldset {
 
 legend {
 	padding: 0;
-	margin: 0 0 2rem 0;
+	margin: 0 0 1rem 0;
 	display: table;
+	font-weight: 300;
 }
 
 legend h2 {
@@ -84,21 +100,23 @@ fieldset > div {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	align-items: stretch;
+	margin-bottom: 4rem;
+}
+
+fieldset legend strong {
+	cursor: pointer;
+	color: #4CCCA7;
 }
 
 fieldset legend + fieldset {
 	margin-top: 0;
 }
 
-fieldset fieldset legend {
-	margin: 0 0 1rem 0;
-	font-weight: 700;
-}
-
 fieldset fieldset label {
 	position: relative;
 	display: grid;
 	align-items: stretch;
+	font-weight: 100;
 }
 
 fieldset fieldset input[type='radio'] {
@@ -127,49 +145,14 @@ fieldset fieldset input[type='radio']:focus:not(:focus-visible) + span {
 }
 
 fieldset fieldset input[type='radio']:hover + span {
-	background: #ddd8ef;
+	color: #000;
+	background: #4CCCA7;
+}
+
+fieldset fieldset input[type='radio']:focus + span {
+	outline: 1px dotted #4CCCA7; 
 }
 
 fieldset fieldset input[type='radio']:checked + span {
 	border-color: #382c63;
-}
-
-button {
-	padding: 1.5rem 2rem;
-	font-size: 1.25rem;
-	border: 0;
-	cursor: pointer;
-	background: #382c63;
-	color: #fff;
-	align-self: center;
-}
-
-button:hover {
-	background: #31245d;
-}
-
-button:focus {
-	outline: 0.2rem dotted #382c63;
-}
-
-button:focus:not(:focus-visible) {
-	outline: none;
-}
-
-table {
-	width: 100%;
-	border-spacing: 0;
-}
-
-th, td {
-	padding: 1rem 0.5rem;
-	text-align: left;
-}
-
-th:first, td:first {
-	padding-left: 0;
-}
-
-tr:nth-child(odd) td {
-	background: #eee;
 }

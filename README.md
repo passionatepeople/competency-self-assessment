@@ -18,8 +18,9 @@ $ pnpm run build
 
 ## Wish list:
 
-- [ ] Use predefined question `id`s to enable keeping result URLs stable even if questions change.
-- [ ] Enhance form to use client-side router on submit.
-- [ ] Improve result visualisation, e.g. via `<td>` background color.
+- [x] Enhance form to use client-side router on submit.
+- [x] Improve result visualisation, e.g. via `<td>` background color.
 - [ ] Page title, favicon, manifest and all that jazz.
-- [ ] Add a `LICENSE`
+- [x] Add a `LICENSE`
+- [ ] Adjust for smaller screens
+- [ ] Questions to prioritize learning areas
