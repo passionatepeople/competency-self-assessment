@@ -1,5 +1,5 @@
 {
-  "name": "pp-competency-evaluation",
+  "name": "competency-self-assessment",
   "version": "0.0.4",
   "scripts": {
     "prebuild": "[ \"$CI\" = true ] && npx pnpm install || echo Skipping prebuild",
@@ -20,5 +20,7 @@
     "typescript": "^4.3.2",
     "vite": "^2.3.4"
   },
-  "type": "module"
+  "type": "module",
+  "license": "MIT",
+  "author": "Passionate People <info@passionatepeople.io>"
 }
