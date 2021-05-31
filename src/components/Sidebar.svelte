@@ -100,6 +100,7 @@
   progress::-webkit-progress-bar {
     background-color: #eee;
     border-radius: 4px;
+    background: rgba(0, 0, 0, .2);
   }
 
   progress::-webkit-progress-value {
@@ -123,7 +124,7 @@
   }
 
   button:disabled {
-    background: rgba(200, 200, 200, .7);
+    background: rgba(200, 200, 200, .3);
     color: #ccc;
     cursor: not-allowed;
   }

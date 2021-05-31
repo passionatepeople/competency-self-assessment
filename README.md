@@ -22,3 +22,5 @@ $ pnpm run build
 - [x] Improve result visualisation, e.g. via `<td>` background color.
 - [ ] Page title, favicon, manifest and all that jazz.
 - [x] Add a `LICENSE`
+- [ ] Adjust for smaller screens
+- [ ] Questions to prioritize learning areas

@@ -32,6 +32,10 @@ h2 {
 	font-weight: 400;
 }
 
+a {
+	color: #fff;
+}
+
 main {
 	flex: 1 0 100%;
 	box-sizing: border-box;
@@ -148,25 +152,3 @@ fieldset fieldset input[type='radio']:hover + span {
 fieldset fieldset input[type='radio']:checked + span {
 	border-color: #382c63;
 }
-
-table {
-	width: 100%;
-	border-spacing: 0;
-}
-
-th, td {
-	padding: 1rem 0.5rem;
-}
-
-th {
-	text-align: left;
-}
-
-td {
-	text-align: center;
-}
-
-th:first, td:first {
-	padding-left: 0;
-}
-

@@ -49,7 +49,7 @@
 <h1> Results </h1>
 <a class="back" href="/">Back</a>
 <table>
-  <tr>
+  <tr class="categories">
     <th aria-hidden="true" />
     {#each categories as cat}
       <th scope="col">{questionnaire.categories[cat].name}</th>
@@ -61,7 +61,7 @@
       {#each categories as cat}
       <td
         style="background-color: {cell(cat, levelIdx).bg}"
-        on:click={() => alert(cell(cat, levelIdx).info.map(i => `${i.text} - ${agreementGrades[i.answer]}`).join('\n\n'))}
+        on:click={() => alert(level + ' ' + questionnaire.categories[cat].name + '\n\n' + cell(cat, levelIdx).info.map(i => `${i.text} - ${agreementGrades[i.answer]}`).join('\n\n'))}
       >
         {cell(cat, levelIdx).text}
       </td>
@@ -71,7 +71,25 @@
 </table>
 
 <style>
-  .back {
-    color: #aaa;
+  table {
+    width: 100%;
+    border-spacing: 0;
+  }
+
+  th, td {
+    padding: 1rem 0.5rem;
+  }
+
+  th {
+    text-align: left;
+  }
+
+  tr.categories th, td {
+    text-align: center;
+  }
+
+
+  th:first, td:first {
+    padding-left: 0;
   }
 </style>
