@@ -83,7 +83,7 @@
     color: #aaa;
   }
   aside ul li.completed {
-    color: #4CCCA7;
+    color: #4ccca7;
     cursor: pointer;
   }
 

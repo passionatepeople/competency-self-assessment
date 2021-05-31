@@ -101,6 +101,7 @@ fieldset > div {
 
 fieldset legend strong {
 	cursor: pointer;
+	color: #4CCCA7;
 }
 
 fieldset legend + fieldset {
@@ -140,7 +141,8 @@ fieldset fieldset input[type='radio']:focus:not(:focus-visible) + span {
 }
 
 fieldset fieldset input[type='radio']:hover + span {
-	background: #ddd8ef;
+	color: #fff;
+	background: #4CCCA7;
 }
 
 fieldset fieldset input[type='radio']:checked + span {

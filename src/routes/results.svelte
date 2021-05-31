@@ -11,7 +11,6 @@
 <script lang="ts">
   import type { Questionnaire } from './_questionnaire';
   import { answers } from '../stores.js';
-  import { interpolateColor } from '../utils.js';
 
   export let questionnaire: Questionnaire;
 
@@ -26,14 +25,10 @@
     const catAnswers = $answers[cat].filter((_, idx) => cellQuestions.includes(idx));
 
     const totalPoints = catAnswers.reduce((a, n) => a + n, 0);
-    const percentage = 100 * totalPoints / (catAnswers.length * 3);
+    const ratio = totalPoints / (catAnswers.length * 3);
+    const percentage = 100* ratio;
+    const bg = `rgba(76, 204, 167, ${ratio})`;
 
-    let bg = '#ffffff';
-    if (totalPoints / (catAnswers.length * 3) === 1) {
-      bg = '#4CCCA7';
-    } else if (totalPoints / (catAnswers.length * 3) > 0) {
-      bg = `#${interpolateColor('ffffff', '4CCCA7', totalPoints / (catAnswers.length * 3))}`;
-    }
 
     const info = questionnaire.categories[cat].questions
       .filter(q => q.level === levelIdx)
@@ -52,7 +47,7 @@
 </script>
 
 <h1> Results </h1>
-<a href="/">Back</a>
+<a class="back" href="/">Back</a>
 <table>
   <tr>
     <th aria-hidden="true" />
@@ -74,3 +69,9 @@
     </tr>
   {/each}
 </table>
+
+<style>
+  .back {
+    color: #aaa;
+  }
+</style>
