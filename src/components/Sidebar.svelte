@@ -34,20 +34,20 @@
       {#each categories as cat}
         <li
           class:completed={$answers[cat].every(a => a !== null)}
-          class:active={cat === $currentCategory}
+          aria-current={cat === $currentCategory ? 'step' : 'false'}
           on:click={() => $answers[cat].some(a => a !== null) ? $currentCategory = cat : null}
         >
           {questionnaire.categories[cat].name}
           ({$answers[cat].filter(a => a !== null).length}/{questionnaire.categories[cat].questions.length})
           {#if $answers[cat].every(a => a !== null)}
-            <span>✅</span>
+            <span aria-name="Is completed">✅</span>
           {/if}
         </li>
       {/each}
 
     </ul>
 
-    <button on:click={handleOnSubmit} disabled={$answers[$currentCategory].some(a => a === null)}>
+    <button class="cta" on:click={handleOnSubmit} disabled={$answers[$currentCategory].some(a => a === null)}>
       {#if filledQuestions === totalQuestions}
         See results
       {:else}
@@ -57,7 +57,7 @@
 
     <br>
     <br>
-    <span class="reset" on:click={reset}>Reset</span>
+    <button class="reset" on:click={reset}>Reset</button>
   </div>
 </aside>
 
@@ -87,7 +87,7 @@
     cursor: pointer;
   }
 
-  aside ul li.active {
+  aside ul li[aria-current=step] {
     color: #fff;
   }
 
@@ -108,7 +108,7 @@
     border-radius: 4px;
   }
 
-  button {
+  button.cta {
     padding: 0.75rem;
     font-size: 1.25rem;
     width: calc(100% - 30px);
@@ -119,27 +119,32 @@
     align-self: center;
   }
 
-  button:hover {
+  button.cta:hover {
     background: #251d41;
   }
 
-  button:disabled {
+  button.cta:disabled {
     background: rgba(200, 200, 200, .3);
     color: #ccc;
     cursor: not-allowed;
   }
 
-  button:focus {
+  button.cta:focus {
     outline: 0.2rem dotted #382c63;
   }
 
-  button:focus:not(:focus-visible) {
+  button.cta:focus:not(:focus-visible) {
     outline: none;
   }
 
-  .reset {
+  button.reset {
+    display: inline;
     cursor: pointer;
     color: #aaa;
+    font-size: 1.25rem;
+    background: none;
+    color: #aaa;
+    border: 0;
   }
 
   .reset:hover {

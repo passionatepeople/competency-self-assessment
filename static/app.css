@@ -8,12 +8,11 @@ body {
 	flex: 1 0 100%;
 	margin: 0;
 	font-size: 1.25rem;
-	font-family: 'Kanit', sans-serif;
+	font-family: 'Kanit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
 	font-weight: 300;
 	background: rgba(57,45,99,1) 50%;
 	background: linear-gradient(45deg, rgba(76,204,167,1) 0%, rgba(57,45,99,1) 50%, rgba(76,204,167,1) 100%);
 	background-attachment: fixed;
-	color: #fff;
 }
 
 img.logo {
@@ -43,6 +42,7 @@ main {
 	margin: 0 auto;
 	padding: 3%;
 	background: rgba(34, 26, 59, .7);
+	color: #fff;
 }
 
 footer {
@@ -145,8 +145,12 @@ fieldset fieldset input[type='radio']:focus:not(:focus-visible) + span {
 }
 
 fieldset fieldset input[type='radio']:hover + span {
-	color: #fff;
+	color: #000;
 	background: #4CCCA7;
+}
+
+fieldset fieldset input[type='radio']:focus + span {
+	outline: 1px dotted #4CCCA7; 
 }
 
 fieldset fieldset input[type='radio']:checked + span {
